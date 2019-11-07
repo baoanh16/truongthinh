@@ -1,0 +1,405 @@
+.lienhe
+	.tagline
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+	h1
+		font-size: 20px
+		font-weight: 500
+		line-height: 40px
+		text-transform: uppercase
+		color: $den
+		position: relative
+		@media (min-width: 992px)
+			font-size: 36px
+			line-height: 55px
+		&:before
+			position: absolute
+			content: ''
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 38%
+			height: 2px
+			background-color: $secondary
+	.contact-map
+		margin-bottom: 60px
+		.items-wrapper
+			border: 1px solid #e5e5e5
+			padding: 20px
+			padding-right: 10px
+		.items
+			height: 470px
+			overflow-y: auto
+			padding-right: 20px
+			&::-webkit-scrollbar
+				width: 5px
+
+			&::-webkit-scrollbar-track
+				background: #e1e1e1
+
+			&::-webkit-scrollbar-thumb
+				border-radius: .25rem
+				background: linear-gradient(225deg, $secondary 0%, $primary 100%)
+		.item
+			width: 100%
+			background-color: rgba(0,0,0,0)
+			padding: 20px
+			margin-top: 20px
+			border-top: 1px solid #e5e5e5
+			cursor: pointer
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			&:first-child
+				margin-top: 0
+				border-top: 0
+			&:hover, &.active
+				background-color: #eceff7
+				h2
+					color: $primary
+			h2
+				font-size: 15px
+				font-weight: 700
+				color: $den
+				text-transform: uppercase
+				line-height: 22px
+			p, a
+				display: flex
+				align-items: flex-start
+				font-size: 14px
+				line-height: 22px
+				font-weight: 400
+				margin: 8px 0
+			em
+				font-size: 18px
+				color: $primary
+				margin-right: 15px
+			p
+				color: $den
+			a
+				text-decoration: none
+				color: $primary
+				transition: .25s cubic-bezier(.4,0,.2,1)
+				&:hover
+					color: $secondary
+
+		@media (max-width: 992px)
+			display: block
+		@media (min-width: 992px)
+			display: flex
+			justify-content: center
+			.items-wrapper
+				max-width: 33.333%
+				flex: 0 0 33.333%
+		.map
+			width: 100%
+			height: auto
+			@media (max-width: 992px)
+				display: none
+			iframe
+				width: 100%
+				height: 100%
+
+@media (max-width: 992px)
+	iframe
+		width: 100%
+	.contact-map-popup 
+		#contactMap
+			width: 100%
+			height: 80%
+			padding: 0
+			iframe
+				width: 100%
+				height: 100%
+@media (max-width: 992px)
+	.map-iframe
+		display: block !important
+.truongthinh-form-v1
+	padding: 30px
+	background-color: #f5f5f5
+	@media (min-width: 992px)
+		padding: 60px 100px
+		padding-bottom: 110px
+	h2 
+		font-size: 18px
+		font-weight: 400
+		color: $den
+		line-height: 30px
+		text-align: center
+		margin-bottom: 20px
+	.form-group
+		margin-bottom: 20px
+		label
+			display: none
+	input[type='text'], textarea, select
+		width: 100%
+		height: 50px
+		padding: 0 20px
+		color: $den
+		border: 1px solid #e5e5e5
+		box-shadow: none
+		outline: none
+		font-family: 'Bai Jamjuree',sans-serif
+		font-size: 16px
+	textarea
+		height: 200px
+		resize: none
+		padding: 20px
+	input[type='reset']
+		display: none
+
+	.form-group.frm-captcha
+		margin-bottom: 0
+		.frm-captcha-input
+			@media (min-width: 992px)
+				float: left
+				width: 250px
+		.RadCaptcha
+			float: left
+			width: 210px !important
+			position: relative
+			> span
+				position: absolute
+				font-size: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				left: -30px
+				top: 50%
+				transform: translateY(-50%)
+				&:before
+					display: inline-block
+					font-family: 'Material Design Icons'
+					content: '\f026'
+					font-size: 16px
+					color: #ff0000
+			> div > div
+				display: flex
+				flex-direction: row-reverse
+				align-items: center
+				justify-content: flex-end
+				.rcRefreshImage
+					font-size: 0
+					position: relative
+					display: flex !important
+					align-items: center
+					justify-content: center
+					cursor: pointer
+					margin-left: 4px
+					margin-right: 4px
+					text-decoration: none
+					&:before
+						height: 100%
+						font-family: 'Material Design Icons'
+						content: '\f450'
+						font-size: 30px
+						color: $primary
+
+	.form-group.frm-btnwrap
+		> label
+			display: none
+		@media (min-width: 992px)
+			float: left
+			margin-bottom: 0
+			width: calc(100% - 460px)
+		.frm-btn
+			height: 100%
+			@media (min-width: 992px)
+				display: flex
+				align-items: center
+				justify-content: flex-end
+			input[type="submit"]
+				font-size: 15px
+				font-weight: 700
+				color: #ed1c23
+				box-shadow: none
+				outline: none
+				display: block
+				background-color: rgba(0,0,0,0)
+				border: 2px solid #ed1c23
+				text-transform: uppercase
+				width: 100%
+				height: 50px
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				@media (min-width: 992px)
+					width: 200px
+					transition: .25s cubic-bezier(.4,0,.2,1)
+					&:hover
+						background-color: #ed1c23
+						color: $trang
+.RadUpload .ruStyled .ruFileInput 
+	left: 0
+
+.msg-frm.frm-thanks h2
+	font-size: 18px
+	font-weight: 400
+	color: #333
+	line-height: 30px
+	text-align: center
+	margin-bottom: 20px
+	text-transform: uppercase
+	color: #024b9d
+
+.custom-select .options
+	-webkit-box-orient: vertical
+	-webkit-box-direction: normal
+
+.custom-select
+	width: 100%
+	height: 1.875rem
+	-webkit-box-shadow: 0 0 0 1px #e1e1e1
+	box-shadow: 0 0 0 1px #e1e1e1
+	outline: 0
+	font-size: 14px
+	color: #333
+	background-color: #fff
+	cursor: pointer
+	position: relative
+	z-index: 2
+
+
+.custom-select .current-option
+	height: 100%
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+	-webkit-box-pack: justify
+	-ms-flex-pack: justify
+	justify-content: space-between
+	padding: 0 1rem
+
+
+.custom-select .current-option span
+	font-size: .875rem
+	font-weight: 400
+	color: #333
+
+
+.custom-select .current-option em,
+.custom-select .current-option i,
+.custom-select .current-option span
+	-webkit-transition: .5s ease-in-out
+	-o-transition: .5s ease-in-out
+	transition: .5s ease-in-out
+
+
+.custom-select .current-option em,
+.custom-select .current-option i
+	font-size: 1rem
+
+
+.custom-select .current-option.active
+	border: 1px solid #034ea2
+
+
+.custom-select .current-option.active span
+	color: #034ea2
+
+
+.custom-select .current-option.active em,
+.custom-select .current-option.active i
+	-webkit-transform: rotate(180deg)
+	-ms-transform: rotate(180deg)
+	transform: rotate(180deg)
+
+
+.custom-select .options
+	-ms-flex-direction: column
+	flex-direction: column
+	height: 0
+
+
+.custom-select .options,
+.custom-select .options a
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	overflow: hidden
+	-webkit-transition: .5s ease-in-out
+	-o-transition: .5s ease-in-out
+	transition: .5s ease-in-out
+
+
+.custom-select .options a
+	width: 100%
+	height: 1.875rem
+	padding-left: 2rem
+	padding-right: 1rem
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
+	text-decoration: none
+	font-size: .875rem
+	font-weight: 400
+	color: #fff
+	background-color: #034ea2
+	border-left: 1px solid #034ea2
+	border-right: 1px solid #034ea2
+	border-bottom: 1px solid #fff
+	-webkit-transform: scale(0)
+	-ms-transform: scale(0)
+	transform: scale(0)
+
+
+.custom-select .options.active
+	height: 11.25rem
+
+
+.custom-select .options.active a
+	-webkit-transform: scale(1)
+	-ms-transform: scale(1)
+	transform: scale(1)
+
+
+.custom-select .options.active a:first-child
+	-webkit-transition-delay: .1s
+	-o-transition-delay: .1s
+	transition-delay: .1s
+
+
+.custom-select .options.active a:nth-child(2)
+	-webkit-transition-delay: .25s
+	-o-transition-delay: .25s
+	transition-delay: .25s
+
+
+.custom-select .options.active a:nth-child(3)
+	-webkit-transition-delay: .4s
+	-o-transition-delay: .4s
+	transition-delay: .4s
+
+
+.custom-select .options.active a:nth-child(4)
+	-webkit-transition-delay: .55s
+	-o-transition-delay: .55s
+	transition-delay: .55s
+
+.custom-select .options.active a:nth-child(5)
+	-webkit-transition-delay: .7s
+	-o-transition-delay: .7s
+	transition-delay: .7s
+
+.custom-select .options.active a:nth-child(6)
+	-webkit-transition-delay: .85s
+	-o-transition-delay: .85s
+	transition-delay: .85s
+.custom-select .options.active a:nth-child(7)
+	-webkit-transition-delay: 1s
+	-o-transition-delay: 1s
+	transition-delay: 1s
+.custom-select .options.active a:nth-child(8)
+	-webkit-transition-delay: 1.15s
+	-o-transition-delay: 1.15s
+	transition-delay: 1.15s
+
+
+
+.custom-option:hover
+	color: #fff !important
+

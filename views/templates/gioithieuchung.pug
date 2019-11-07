@@ -1,0 +1,17 @@
+extends _layout/_layout.pug
+
+block var
+    - title = 'Giới thiệu chung'
+    - bodyClass = 'gioithieuchung-page has-sidebar'
+
+block header
+    include ../lib/_header/index.pug
+block banner
+    include ../lib/banner/banner-trangrieng/index.pug
+    include ../lib/breadcrumb/index.pug
+block sidebar
+    include ../lib/sidebar/index.pug
+block main
+    include ../lib/gioithieuchung/index.pug
+block footer
+    include ../lib/_footer/index.pug

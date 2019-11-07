@@ -1,0 +1,592 @@
+.canhcam-header-1
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 9997
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.1)
+	.desktop-header
+		width: 100%
+		display: flex
+		align-items: center
+		background-color: #fff
+		padding: 5px 0
+	.mobile-header
+		position: fixed
+		z-index: 9999
+		width: 20rem
+		height: 100%
+		overflow-y: auto
+		overflow-x: hidden
+		top: 0
+		left: -20rem
+		background-color: #fff
+		padding: 15px 0
+		transition: .25s cubic-bezier(.4,0,.2,1)
+		&.active
+			left: 0
+	.desktop-header-container
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-direction: row
+		@media (max-width: 1025px)
+			justify-content: flex-start
+	.tool-nav
+		display: flex
+		flex-direction: column
+	.logo
+		display: flex
+		align-items: center
+		.text-1, .text-2, .text-3
+			a
+				font-family: 'Oswald', sans-serif
+				margin-left: .75rem
+				text-decoration: none
+		.text-1 a
+			font-size: 12px
+			color: #0062b3
+			text-transform: uppercase
+			font-weight: 700
+		.text-2 a
+			font-size: 12px
+			color: #ed1c24
+			font-weight: 500
+			letter-spacing: 1.85px
+		.text-3 a
+			font-size: 12px
+			color: #0062b3
+			font-weight: 500
+			line-height: 20px
+	.mail, .phone
+		display: flex
+		align-items: center
+		text-decoration: none
+		em, i
+			color: $primary
+			font-size: 1.125rem
+			margin-right: .5rem
+			transition: .25s cubic-bezier(.4,0,.2,1)
+		span
+			font-size: 14px
+			font-weight: 400
+			line-height: 1.25rem
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			color: #333333
+	.mail
+		margin-bottom: 1rem
+	.divider
+		width: 100%
+		height: 1px
+		background-color: #e1e1e1
+		margin-bottom: 1rem
+	.search
+		position: relative
+		.search-toggle
+			width: 1.75rem
+			height: 1.75rem
+			display: none
+			align-items: center
+			justify-content: center
+			position: relative
+			background-color: $secondary
+			cursor: pointer
+			transition: .25s cubic-bezier(.4,0,.2,1)
+			margin-right: 1.25rem
+			margin-left: 1.25rem
+			em, i
+				font-size: 1rem
+				color: #fff
+				transition: .25s cubic-bezier(.4,0,.2,1)
+				position: absolute
+				top: 50%
+				left: 50%
+			.mdi-magnify
+				opacity: 1
+				transform: translateX(-50%) translateY(-50%) scale(1)
+			.mdi-close
+				opacity: 0
+				transform: translateX(-50%) translateY(-50%) scale(0)
+		&.active .search-toggle
+			background-color: $primary
+			border-radius: 50%
+			.mdi-magnify
+				opacity: 0
+				transform: translateX(-50%) translateY(-50%) scale(0)
+			.mdi-close
+				opacity: 1
+				transform: translateX(-50%) translateY(-50%) scale(1)
+		.searchbox
+			display: flex
+			align-items: center
+			width: 15.625rem
+			height: 2.1875rem
+			margin-bottom: 0.325rem
+			.searchinput
+				width: 100%
+				height: 100%
+				border: 0
+				outline: 0
+				background-color: #fff
+				font-size: .875rem
+				font-weight: 400
+				color: #333
+				padding-left: .5rem
+				box-shadow: 0 0 0 1px #e5e5e5
+				transition: .25s cubic-bezier(.4,0,.2,1)
+			.searchbutton
+				width: 2.1875rem
+				height: 2.1875rem
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: $secondary
+				border: 0
+				outline: 0
+				color: #fff
+				font-size: 1.125rem
+				cursor: pointer
+				margin-left: .675rem
+				transition: .25s cubic-bezier(.4,0,.2,1)
+				&:hover
+					background-color: $primary
+	.language
+		display: flex
+		align-items: center
+		a
+			display: flex
+			align-items: center
+			font-size: .875rem
+			text-decoration: none
+			color: #333
+			span
+				display: none
+			+ a
+				margin-left: 5px
+		@media (max-width: 1025px)
+			margin-left: auto
+			margin-right: 10px
+			a.active
+				display: none
+	.zone-nav
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-top: .675rem
+
+	.zone-nav a
+		font-size: .875rem
+		font-weight: 500
+		width: 100%
+		display: block
+		color: #333
+		text-decoration: none
+		transition: .25s cubic-bezier(.4,0,.2,1)
+		line-height: 3rem
+		position: relative
+		&:last-child
+			margin-right: 0
+	.hamburger
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		position: relative
+		overflow: hidden
+		width: 32px
+		height: 32px
+		i, em
+			font-size: 36px
+
+	@media (max-width: 992px)
+		.logo
+			.text-3
+				display: none !important
+			img
+				height: 50px
+		.zone-nav a.has-sub-1
+			> div.parent-link-1
+				display: flex
+				align-items: center
+				justify-content: space-between
+				> em
+					flex: 0 0 36px
+					color: $den
+					font-size: 18px
+					display: flex
+					align-items: center
+					justify-content: center
+					background-color: #fafafa
+					border-radius: 4px
+		.zone-nav .has-sub-2
+			padding: 6px 29px 6px 15px
+			width: 100%
+			line-height: 36px
+			> div.parent-link-2
+				display: flex
+				align-items: center
+				justify-content: space-between
+				> div
+					flex: 0 0 calc(100% - 36px)
+				> em
+					flex: 0 0 36px
+					color: $den
+					font-size: 18px
+					display: flex
+					align-items: center
+					justify-content: center
+					background-color: #fafafa
+					border-radius: 4px
+		.sub-menu-1
+			position: static
+			display: none
+			background-color: $trang
+			width: 320px
+			height: 100%
+			overflow-y: auto
+			z-index: 1
+			&.active
+				left: 0
+			> div
+				width: calc(100% - 15px)
+				padding: 12px 15px
+				line-height: 24px
+				&.active
+					background-color: #fff
+				&.has-sub-2
+					&.active
+						background-color: #fff
+			.previous-link-1, .previous-link-2
+				display: none
+				align-items: center
+				width: 100%
+				border-bottom: 1px solid #e1e1e1
+				em
+					flex: 0 0 24px
+					color: $den
+					font-size: 18px
+					display: flex
+					align-items: center
+					justify-content: flex-start
+					margin-right: 8px
+		.sub-menu-2
+			position: static
+			top: 0
+			left: -320px
+			background-color: $trang
+			width: 320px
+			height: 100%
+			z-index: 1
+			display: none
+			overflow-y: auto
+			&.active
+				left: 0
+			> div
+				width: calc(100% - 15px)
+				padding: 12px 15px
+				line-height: 24px
+	@media (min-width: 992px)
+		.zone-nav a.has-sub-1
+			>div > em
+				display: none
+			&:hover
+				.sub-menu-1
+					opacity: 1
+					visibility: visible
+					top: 50px
+					transition: .25s cubic-bezier(.4,0,.2,1)
+		.zone-nav .has-sub-2
+			> div > em
+				display: none
+		.sub-menu-1
+			visibility: hidden
+			position: absolute
+			top: 60px
+			left: 50%
+			width: 300px
+			transform: translateX(-50%)
+			background-color: $trang
+			opacity: 0
+			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3)
+			> div
+				width: 100%
+				line-height: 24px
+				padding: 18px 30px
+				font-size: 14px
+				position: relative
+				color: $den
+				font-weight: 400
+				border-left: 3px solid rgba(0,0,0,0)
+				transition: .25s cubic-bezier(.4,0,.2,1)
+				&:hover, &.active
+					background-color: #eceff7
+					border-left: 3px solid $primary
+				&:nth-child(2)
+					&:before
+						position: absolute
+						content: ''
+						background-color: rgba(0,0,0,0)
+						width: 100%
+						height: 35px
+						top: -35px
+						left: 0
+					&:after
+						position: absolute
+						content: ''
+						width: 15px
+						height: 15px
+						top: 0px
+						left: 50%
+						z-index: -1
+						transform: rotate(45deg) translateX(-50%)
+						background-color: $trang
+					&.isOverflow
+						&:after
+							transform: rotate(45deg)
+							left: auto
+							right: 15px
+							top: -5px
+				&.has-sub-2
+					&:hover
+						.sub-menu-2
+							top: 0
+							opacity: 1
+							visibility: visible
+							transition: .25s cubic-bezier(.4,0,.2,1)
+		.sub-menu-2
+			position: absolute
+			right: -300px
+			width: 300px
+			max-height: 300px
+			box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3)
+			opacity: 0
+			visibility: hidden
+			top: 10px
+			overflow-y: auto
+			&::-webkit-scrollbar
+				width: 4px
+
+			&::-webkit-scrollbar-track
+				background: #e1e1e1
+
+			&::-webkit-scrollbar-thumb
+				border-radius: 4px
+				background: linear-gradient(225deg, $secondary 0%, $primary 100%)
+			> div
+				background-color: $trang
+				width: 100%
+				line-height: 24px
+				padding: 18px 30px
+				font-size: 14px
+				position: relative
+				color: $den
+				font-weight: 400
+				border-left: 3px solid rgba(0,0,0,0)
+				transition: .25s cubic-bezier(.4,0,.2,1)
+				&:hover, &.active
+					background-color: #eceff7
+					border-left: 3px solid $primary
+
+		.previous-link-1, .previous-link-2
+			display: none
+
+@media (min-width: 992px)
+	.section
+		padding: 3.75rem 0
+	.canhcam-header-1
+		.desktop-header
+			height: 90px
+			padding-top: 0
+			padding-bottom: 0
+		.mobile-header
+			display: none
+	.canhcam-header-1 .zone-nav
+		border-top: 0
+	.canhcam-header-1 .zone-nav a
+		color: #333
+		margin-right: 10px
+		font-size: 14px
+		line-height: normal
+		width: auto
+		font-weight: 600
+		&:hover
+			color: $primary
+			
+		&.active
+			color: #ed1c23
+			&:after
+				position: absolute
+				content: ""
+				width: 100%
+				height: 2px
+				z-index: 1
+				left: 0
+				background-color: #ed1c23
+				bottom: -5px
+		&:first-child
+			font-size: 0
+			&:before
+				display: block
+				content: ""
+				font-family: Material Design Icons
+				font-size: 1.125rem
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+	.canhcam-header-1 .tool-nav
+		-webkit-box-orient: horizontal
+		-webkit-box-direction: normal
+		-ms-flex-direction: row
+		flex-direction: row
+		align-items: center
+		-webkit-box-pack: end
+		-ms-flex-pack: end
+		justify-content: flex-end
+		margin-bottom: 0.675rem
+	.canhcam-header-1
+		.mail
+			em, i
+				color: $primary
+		.phone
+			em, i
+				color: $primary
+	.canhcam-header-1
+		.mail span, .phone span
+			color: #333
+		.mail:hover
+			em, i
+				color: $secondary
+		.phone:hover
+			em, i
+				color: $secondary
+		.mail:hover span, .phone:hover span
+			color: $primary
+		.mail
+			margin-bottom: 0
+	.canhcam-header-1 .divider
+		margin: 0 1rem
+		width: 1px
+		height: 0.75rem
+	.canhcam-header-1 .search .search-toggle
+		display: flex
+		&:hover
+			background-color: $primary
+			border-radius: 0.5rem
+	.canhcam-header-1 .search
+		&.active .searchbox
+			z-index: 888
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+			transform: scale(1)
+			opacity: 1
+		.searchbox
+			position: absolute
+			z-index: -1
+			right: 1.25rem
+			top: 5.9375rem
+			margin-bottom: 0
+			opacity: 0
+			-webkit-transform: scale(0)
+			-ms-transform: scale(0)
+			transform: scale(0)
+			-webkit-transform-origin: top right
+			-ms-transform-origin: top right
+			transform-origin: top right
+			transition: .25s cubic-bezier(.4,0,.2,1)
+	.canhcam-header-1
+		.search .searchbox .searchinput:focus
+			-webkit-box-shadow: 0 0 0 1px $primary, 0 0 15px 0 rgba(0, 0, 0, 0.2)
+			box-shadow: 0 0 0 1px $primary, 0 0 15px 0 rgba(0, 0, 0, 0.2)
+			padding-left: 1rem
+		.language
+			margin-bottom: 0
+			a
+				font-size: 0
+				span
+					display: none
+				&:first-child
+					margin-right: 0.675rem
+					&:before
+						position: absolute
+						content: ""
+						top: 50%
+						right: -1.25rem
+						-webkit-transform: translateY(-50%)
+						-ms-transform: translateY(-50%)
+						transform: translateY(-50%)
+						width: 1px
+						height: .75rem
+						background-color: #fff
+				&:last-child
+					margin-left: 0
+			@media (max-width: 768px)
+				.active
+					display: none
+	.canhcam-header-1 .zone-nav
+		flex-direction: row
+		align-items: center
+		justify-content: normal
+		margin-top: .375rem
+
+
+			
+	.canhcam-header-1 .zone-nav a
+		font-size: .75rem
+		text-transform: uppercase
+
+@media (min-width: 1200px)
+	.canhcam-header-1
+		.logo
+			.text-1 a, .text-2 a
+				font-size: 16px
+			.text-3 a
+				font-size: 13px
+		.zone-nav a
+			margin-right: 20px
+
+@media (min-width: 1600px)
+	.canhcam-header-1 .zone-nav a
+		margin-right: 1.25rem
+
+@media (max-width: 991px)
+	.canhcam-header-1 .custom-nav
+		display: none
+	.backdrop
+		position: fixed
+		z-index: -1
+		opacity: 0
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(0, 0, 0, .7)
+		transition: .25s cubic-bezier(.4,0,.2,1)
+		visibility: hidden
+		&.active
+			z-index: 9998
+			opacity: 1
+			visibility: visible
+	.canhcam-header-1 .tool-nav
+		padding: 0 15px
+	.canhcam-header-1 .zone-nav a
+		padding: 6px 15px
+		width: 100%
+		line-height: 36px
+	.canhcam-header-1 .zone-nav
+		position: relative
+		padding: 15px 0
+		&:before
+			position: absolute
+			content: ''
+			z-index: 1
+			top: 0
+			left: 15px
+			width: calc(100% - 30px)
+			height: 1px
+			background-color: #f1f1f1
+
+@media (min-width: 576px) and (max-width: 992px)
+	.hamburger
+		margin-left: 20px
+
+@media (min-width: 576px)
+	.canhcam-header-1 .phone span
+		display: block

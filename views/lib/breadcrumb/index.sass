@@ -1,0 +1,32 @@
+.breadcrumb-wrapper
+    background-color: $secondary
+    @media (max-width: 992px)
+        display: none
+.breadcrumb
+    display: flex
+    align-items: center
+    width: 100%
+    height: 40px
+    list-style: none
+    li
+        height: 100%
+    a
+        display: flex
+        align-items: center
+        height: 100%
+        position: relative
+        color: #ffffff
+        font-size: 15px
+        font-weight: 400
+        text-decoration: none
+        &:after
+            display: block
+            font-family: 'Linearicons-Free'
+            content: '\e876'
+            margin: 0 15px
+            font-size: 12px
+    li
+        &:last-child
+            a
+                &:after
+                    display: none

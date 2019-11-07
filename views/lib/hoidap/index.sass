@@ -1,0 +1,70 @@
+.hoidap
+    h1
+        font-size: 28px
+        font-weight: 700
+        line-height: 30px
+        color: $primary
+        text-transform: uppercase
+        margin-bottom: 20px
+        @media (max-width: 992px)
+            font-size: 20px
+    .desc
+        font-size: 18px
+        font-weight: 400
+        color: #999999
+        line-height: 28px
+        a
+            text-decoration: underline
+            color: #ea212d
+            transition: .25s cubic-bezier(.4,0,.2,1)
+            &:hover
+                text-decoration: none
+                color: $primary
+
+    .faqs
+        margin-top: 20px
+        .faq
+            .question
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: space-between
+                border-bottom: 1px solid #e1e1e1
+                cursor: pointer
+                transition: .25s cubic-bezier(.4,0,.2,1)
+                p
+                    padding: 15px 0
+                    font-size: 16px
+                    color: $den
+                    flex: calc(100% - 40px)
+                    strong
+                        color: $den
+                        transition: .25s cubic-bezier(.4,0,.2,1)
+                em
+                    padding-bottom: 15px
+                    flex: 0 0 40px
+                    display: flex
+                    align-items: center
+                    justify-content: flex-end
+                    font-size: 24px
+                    color: $den
+                    transition: .25s cubic-bezier(.4,0,.2,1)
+                    &:before
+                        transition: .25s cubic-bezier(.4,0,.2,1)
+            .answer
+                display: none
+                padding: 25px 40px
+                p
+                    font-size: 15px
+                    font-weight: 400
+                    color: #666666
+            &.active
+                .question
+                    border-bottom: 2px solid $primary
+                    p
+                        strong
+                            color: $primary
+                    em
+                        color: $secondary
+                        &:before
+                            transform: rotate(180deg)

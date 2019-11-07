@@ -1,0 +1,40 @@
+{
+	"name": "gulp-basic",
+	"version": "2.0.0",
+	"description": "basic tool for Front-end dev",
+	"main": "gulpfile.babel.js",
+	"scripts": {
+		"start": "gulp"
+	},
+	"author": "sonvh2510",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.0",
+		"@babel/register": "^7.0.0",
+		"autoprefixer": "^9.4.3",
+		"browser-sync": "^2.26.3",
+		"del": "^3.0.0",
+		"gulp": "^4.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-hub": "github:frankwallis/gulp-hub#registry-init",
+		"gulp-if": "^2.0.2",
+		"gulp-postcss": "^8.0.0",
+		"gulp-pug": "^4.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify-es": "^1.0.4",
+		"node-sass": "^4.11.0"
+	},
+	"browserslist": [
+		"last 4 version",
+		"> 1%",
+		"IE 9"
+	],
+	"dependencies": {
+		"js-cookie": "^2.2.0"
+	}
+}

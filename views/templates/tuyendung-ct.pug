@@ -1,0 +1,15 @@
+extends _layout/_layout.pug
+
+block var
+    - title = 'Tuyển dụng CT'
+    - bodyClass = 'tuyendung-page'
+
+block header
+    include ../lib/_header/index.pug
+block banner
+    include ../lib/banner/banner-trangrieng/index.pug
+    include ../lib/breadcrumb/index.pug
+block main
+    include ../lib/tuyendung/chitiet.pug
+block footer
+    include ../lib/_footer/index.pug
